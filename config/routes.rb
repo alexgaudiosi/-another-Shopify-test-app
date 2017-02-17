@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount ShopifyApp::Engine, at: '/multify-2'
+  mount ShopifyApp::Engine, at: '/'
 
   get 'modal' => "home#modal", :as => :modal
   get 'modal_buttons' => "home#modal_buttons", :as => :modal_buttons
