@@ -1,19 +1,38 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5.1'
-gem 'pg'
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
 
-gem 'dotenv-rails'
-gem 'shopify_app', '~> 7.0.0'
 
+gem 'rails', '~> 5.0.1'
+gem 'pg', '~> 0.18'
+gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
-gem 'turbolinks'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.5'
+gem 'shopify_app'
+gem 'dotenv-rails'
+gem 'httparty'
+gem 'activeresource', github: 'rails/activeresource'
+
+
+group :development, :test do
+
+  gem 'byebug', platform: :mri
+end
 
 group :development do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
+
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '~> 3.0.5'
+
   gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
