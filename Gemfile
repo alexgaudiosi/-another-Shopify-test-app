@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'shopify_app'
 gem 'dotenv-rails'
 gem 'httparty'
+gem "better_errors"
 gem 'activeresource', github: 'rails/activeresource'
 
 
