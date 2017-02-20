@@ -20,6 +20,7 @@ gem 'dotenv-rails'
 gem 'httparty'
 gem "better_errors"
 gem 'activeresource', github: 'rails/activeresource'
+gem 'pry'
 
 
 group :development, :test do

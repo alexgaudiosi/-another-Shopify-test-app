@@ -4,4 +4,5 @@ ShopifyApp.configure do |config|
   config.secret = SHOPIFY_SECRET
   config.scope = 'read_customers, read_orders, write_products'
   config.embedded_app = true
+  redirect_uri = "https://shopify-multify-2.herokuapp.com/auth/shopify/callback"
 end
